@@ -1,0 +1,23 @@
+# # # see https://symfony.com/doc/current/reference/configuration/framework.html
+framework:
+    secret: '%env(APP_SECRET)%'
+    session: true
+
+    messenger:
+        transports:
+            async: '%env(MESSENGER_TRANSPORT_DSN)%'
+
+    # logger:
+        # handlers:
+            # main:
+                # type: stream
+                # path: "%kernel.logs_dir%/%kernel.environment%.log"
+                # level: debug
+
+
+monolog:
+    handlers:
+        main:
+            type: stream
+            path: "%kernel.logs_dir%/%kernel.environment%.log"
+            level: debug
