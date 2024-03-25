@@ -1,0 +1,15 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+users:
+    path: /users
+    controller: App\Controller\UserController::create
+    methods: [POST]  # Adjust the HTTP methods as needed
+
+users_index:
+    path: /users
+    controller: App\Controller\UserController::index
+    methods: [GET]  # Adjust the HTTP methods as needed
